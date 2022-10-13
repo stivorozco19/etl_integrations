@@ -1,0 +1,24 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\
+DEBUG: _PENTAHO_JAVA=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe
+
+D:\app\data-integration>"C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe" --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED  "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin"  -Djava.locale.providers=COMPAT,SPI "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.pan.Pan -initialDir "D:\app\ETL\Ejercicio Fuente de Datos\etl_integrations"\ -file:ktr_call_job.ktr 
+20:45:49,575 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+20:45:55,695 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at D:\app\data-integration\.\system\karaf\cach ***
+***   es\pan\data-1                                                         ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+20:45:59,727 INFO  [DriverManager] Installing driver kars.
+20:45:59,727 INFO  [DriverManager] 0 drivers will be installed.
+20:45:59,737 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/12 20:46:02 - Pan - Start of run.
+2022/10/12 20:46:02 - ktr_call_job - Dispatching started for transformation [ktr_call_job]
+2022/10/12 20:46:02 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2022/10/12 20:46:02 - Pan - Finished!
+2022/10/12 20:46:02 - Pan - Start=2022/10/12 20:46:02.802, Stop=2022/10/12 20:46:02.880
+2022/10/12 20:46:02 - Pan - Processing ended after 0 seconds.
+2022/10/12 20:46:02 - ktr_call_job -  
+2022/10/12 20:46:02 - ktr_call_job - Step Job ktrs ZIP + Basic.0 ended successfully, processed 0 lines. ( - lines/s)

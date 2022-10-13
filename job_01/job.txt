@@ -1,0 +1,20 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\
+DEBUG: _PENTAHO_JAVA=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe
+
+D:\app\data-integration>"C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe" --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED  "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin"  -Djava.locale.providers=COMPAT,SPI "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.pan.Pan -initialDir "D:\app\ETL\Ejercicio Fuente de Datos\etl_integrations\job_01"\ -file:job_paralelo.kjb 
+20:04:23,886 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+20:04:30,022 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at D:\app\data-integration\.\system\karaf\cach ***
+***   es\pan\data-1                                                         ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+20:04:33,961 INFO  [DriverManager] Installing driver kars.
+20:04:33,961 INFO  [DriverManager] 0 drivers will be installed.
+20:04:33,961 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/12 20:04:36 - Pan - Start of run.
+Processing has stopped because of an error: 
+The specified file 'D:\app\ETL\Ejercicio Fuente de Datos\etl_integrations\job_01\job_paralelo.kjb' does not contain transformation XML.
+

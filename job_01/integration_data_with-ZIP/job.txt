@@ -1,0 +1,44 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\
+DEBUG: _PENTAHO_JAVA=C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe
+
+D:\app\data-integration>"C:\Users\Acer\AppData\Local\Programs\Eclipse Foundation\jdk-11.0.12.7-hotspot\\bin\java.exe" --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED  "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin"  -Djava.locale.providers=COMPAT,SPI "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.pan.Pan -initialDir "D:\app\ETL\Ejercicio Fuente de Datos\etl_integrations\job_01\integration_data_with-ZIP"\ -file:transform_fuente_datos.ktr 
+20:06:02,552 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+20:06:08,689 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at D:\app\data-integration\.\system\karaf\cach ***
+***   es\pan\data-1                                                         ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+20:06:12,561 INFO  [DriverManager] Installing driver kars.
+20:06:12,561 INFO  [DriverManager] 0 drivers will be installed.
+20:06:12,561 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/12 20:06:15 - Pan - Start of run.
+2022/10/12 20:06:15 - transform_fuente_datos - Dispatching started for transformation [transform_fuente_datos]
+2022/10/12 20:06:15 - Insert into mock Table.0 - Connected to database [postgresDB] (commit=10000)
+2022/10/12 20:06:16 - JSON dos.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - JSON tres.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - JSON uno.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - JSON seis.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - JSON cinco.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - JSON cuatro.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:16 - Text file output.0 - Finished processing (I=0, O=6000, R=6000, W=6000, U=0, E=0)
+2022/10/12 20:06:16 - XML.0 - Finished processing (I=1000, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:06:17 - Insert into mock Table.0 - Finished processing (I=0, O=7000, R=7000, W=7000, U=0, E=0)
+2022/10/12 20:06:17 - TXT en ZIP.0 - Finished processing (I=0, O=7001, R=7000, W=7000, U=0, E=0)
+2022/10/12 20:06:17 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2022/10/12 20:06:17 - Pan - Finished!
+2022/10/12 20:06:17 - Pan - Start=2022/10/12 20:06:15.730, Stop=2022/10/12 20:06:17.253
+2022/10/12 20:06:17 - Pan - Processing ended after 1 seconds.
+2022/10/12 20:06:17 - transform_fuente_datos -  
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON dos.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step Text file output.0 ended successfully, processed 6000 lines. ( 6000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON tres.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step Insert into mock Table.0 ended successfully, processed 7000 lines. ( 7000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON cuatro.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON cinco.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON seis.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step JSON uno.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step XML.0 ended successfully, processed 1000 lines. ( 1000 lines/s)
+2022/10/12 20:06:17 - transform_fuente_datos - Step TXT en ZIP.0 ended successfully, processed 7000 lines. ( 7000 lines/s)
