@@ -1,0 +1,1 @@
+pan job_paralelo.kjb
