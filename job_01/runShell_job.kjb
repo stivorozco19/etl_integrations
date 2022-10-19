@@ -324,7 +324,7 @@
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>echo "Hola, me ha llamado el job - Trabajo terminado"</script>
+      <script>echo "Hola, me ha llamado el job - Trabajo terminado" > log_shell_final.txt</script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
       <draw>Y</draw>
