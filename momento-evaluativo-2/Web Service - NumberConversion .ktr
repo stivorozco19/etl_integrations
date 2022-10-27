@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>isValidISBN</name>
+    <name>Multiplicacion</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -444,7 +444,7 @@
     </hop>
     <hop>
       <from>Web services lookup</from>
-      <to>output WS</to>
+      <to>XML Output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -461,14 +461,26 @@
     </partitioning>
     <fields>
       <field>
-        <name>sISBN</name>
+        <name>intA</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>978-1-4612-9090-2</nullif>
-        <length>15</length>
+        <nullif>5</nullif>
+        <length>8</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>intB</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>5</nullif>
+        <length>8</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -487,8 +499,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>50</xloc>
-      <yloc>208</yloc>
+      <xloc>192</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -503,14 +515,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <wsURL>http://webservices.daehosting.com/services/isbnservice.wso?wsdl</wsURL>
-    <wsOperation>IsValidISBN13</wsOperation>
+    <wsURL>http://www.dneonline.com/calculator.asmx?wsdl</wsURL>
+    <wsOperation>Multiply</wsOperation>
     <wsOperationRequest/>
-    <wsOperationNamespace>http://webservices.daehosting.com/ISBN</wsOperationNamespace>
+    <wsOperationNamespace>http://tempuri.org/</wsOperationNamespace>
     <wsInFieldContainer/>
     <wsInFieldArgument/>
-    <wsOutFieldContainer>IsValidISBN13Result</wsOutFieldContainer>
-    <wsOutFieldArgument>IsValidISBN13Result</wsOutFieldArgument>
+    <wsOutFieldContainer>MultiplyResult</wsOutFieldContainer>
+    <wsOutFieldArgument>MultiplyResult</wsOutFieldArgument>
     <proxyHost/>
     <proxyPort/>
     <httpLogin/>
@@ -522,16 +534,21 @@
     <reply_as_string>N</reply_as_string>
     <fieldsIn>
       <field>
-        <name>sISBN</name>
-        <wsName>sISBN</wsName>
-        <xsdType>string</xsdType>
+        <name>intA</name>
+        <wsName>intA</wsName>
+        <xsdType>int</xsdType>
+      </field>
+      <field>
+        <name>intB</name>
+        <wsName>intB</wsName>
+        <xsdType>int</xsdType>
       </field>
     </fieldsIn>
     <fieldsOut>
       <field>
-        <name>IsValidISBN13Result</name>
-        <wsName>IsValidISBN13Result</wsName>
-        <xsdType>boolean</xsdType>
+        <name>MultiplyResult</name>
+        <wsName>MultiplyResult</wsName>
+        <xsdType>int</xsdType>
       </field>
     </fieldsOut>
     <attributes/>
@@ -543,14 +560,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>208</yloc>
+      <xloc>480</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>output WS</name>
-    <type>TextFileOutput</type>
+    <name>XML Output</name>
+    <type>XMLOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -559,48 +576,38 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
+    <encoding>UTF-8</encoding>
+    <name_space/>
+    <xml_main_element>Rows</xml_main_element>
+    <xml_repeat_element>Row</xml_repeat_element>
     <file>
-      <name>file</name>
+      <name>${Internal.Transformation.Filename.Directory}${file.separator}output${file.separator}MultiplicationWSResult</name>
+      <extention>xml</extention>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <split>N</split>
-      <haspartno>N</haspartno>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
+      <omit_null_values>N</omit_null_values>
       <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <zipped>N</zipped>
+      <splitevery>0</splitevery>
     </file>
     <fields>
       <field>
-        <name>IsValidISBN13Result</name>
-        <type>Boolean</type>
+        <content_type>Element</content_type>
+        <name>MultiplyResult</name>
+        <element/>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
         <length>-1</length>
-        <precision>-1</precision>
+        <precision>0</precision>
       </field>
     </fields>
     <attributes/>
@@ -612,8 +619,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>208</yloc>
+      <xloc>720</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
